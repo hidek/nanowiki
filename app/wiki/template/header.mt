@@ -9,7 +9,7 @@
 <script type="text/javascript" src="<?= $app->root_uri . '/app/wiki/scripts/jquery-1.2.6.min.js' ?>"></script>
 <script type="text/javascript" src="<?= $app->root_uri . '/app/wiki/scripts/prettify.js' ?>"></script>
 <script type="text/javascript" src="<?= $app->root_uri . '/app/wiki/scripts/script.js' ?>"></script>
-<title>NanoA<?= $c->{title_suffix} ? " :: $c->{title_suffix}" : "" ?></title>
+<title>NanoWiki<?= $c->{name} ? ' - ' . $c->{name} : '' ?></title>
 </head>
 <body>
 <div id="container">
