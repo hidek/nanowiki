@@ -1,12 +1,14 @@
 <?= $app->render('wiki/template/header', {name => $c->{name}}) ?>
 
+<h3 id="name"><?= $c->{name} ?></h3>
+
 ? if ($c->{preview}) {
 <div id="content">
 <?= raw_string($c->{preview}) ?>
 </div>
 ? }
 
-<h3 id="name"><?= $c->{name} ?></h3>
+<a href="http://daringfireball.net/projects/markdown/syntax.php" target="_blank">Markdown syntax</a>
 
 <form method="post">
 <textarea id="input_content" name="content"><?= $c->{content} ?></textarea>
