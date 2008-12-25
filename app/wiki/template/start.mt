@@ -45,12 +45,5 @@ Next &rsaquo;
 <a href="<?= $app->uri_for('wiki/', {page => $c->{pager}->last_page}) ?>">Last &raquo;</a>
 </div>
 
-? if ($app->openid_user) {
-<hr />
-<form action="<?= $app->uri_for('wiki/edit') ?>" method="get">
-Create new page: <input type="text" name="name" />
-<input type="submit" value="create" />
-</form>
-? }
 <?= $app->render('wiki/template/footer') ?>
 
