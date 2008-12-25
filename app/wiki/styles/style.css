@@ -41,3 +41,5 @@ div#diff {line-height:24px;}
 table#versions {}
 ins{text-decoration:none;background-color:#DDFFDD;border:solid 1px #00AA00;}
 del{text-decoration:none;background-color:#FFDDDD;border:solid 1px #CC0000;}
+div#page-stats {text-align: right;}
+div#page-navi {text-align: center;}

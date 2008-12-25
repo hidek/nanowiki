@@ -1,4 +1,9 @@
 <?= $app->render('wiki/template/header', {name => $c->{name}}) ?>
+
+<div id="page-stats">
+Results <?= $c->{pager}->first ?> - <?= $c->{pager}->first ?> of <?= $c->{pager}->total_entries ?>
+</div>
+
 <table>
 <tr>
 <th>name</th>
@@ -14,11 +19,7 @@
 ? }
 </table>
 
-<div class="page-stats">
-Results <?= $c->{pager}->first ?> - <?= $c->{pager}->first ?> of <?= $c->{pager}->total_entries ?>
-</div>
-
-<div class="page-navi">
+<div id="page-navi">
 <a href="<?= $app->uri_for('wiki/', {page => $c->{pager}->first_page}) ?>">&laquo; First</a>
 
 ? if ($c->{pager}->previous_page) {
@@ -44,8 +45,8 @@ Next &rsaquo;
 <a href="<?= $app->uri_for('wiki/', {page => $c->{pager}->last_page}) ?>">Last &raquo;</a>
 </div>
 
-
 ? if ($app->openid_user) {
+<hr />
 <form action="<?= $app->uri_for('wiki/edit') ?>" method="get">
 Create new page: <input type="text" name="name" />
 <input type="submit" value="create" />
