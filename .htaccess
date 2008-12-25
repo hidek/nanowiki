@@ -1,0 +1,8 @@
+DirectoryIndex nanoa.cgi
+<FilesMatch "(\.(pm|mt|conf)|~)$">
+    Deny from All
+    Order deny,allow
+</FilesMatch>
+
+# if .htaccess is being processed, the value is set to 1
+SetEnv HTTP_NANOA_USE_HTACCESS 1

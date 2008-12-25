@@ -1,0 +1,26 @@
+TODO
+----
+
+    ソースに書いてあるものもろもろ
+    サンプルアプリを作ってみる
+    テストを十分に書く。安定したフレームワークにするためにはテストが必須だ。
+    mod_perl のテスト
+    uri_with っぽいのもほしい。
+    documentation する
+    controller を分割ファイル形式にしている場合に、use strict とかオンになってる?
+    ファイルアップロードまわり
+    data/ ディレクトリの処理
+        http://d.hatena.ne.jp/kazuhooku/20081117/1226936533
+    CSRF 対策
+    コンテナ志向について考える
+    - render() したときに、current directory 以外からよめるといいかも
+    -- header.mt を読むときに、app/controller/demo/header.mt → app/controller/tmpl/
+    -- の順番で探す仕組み。
+    モバイルのときのセッション管理
+    -- 端末IDを利用するパターンもつかえるようにする
+    - やるとすれば。。。
+      - bookmark つくる
+      - wiki つくる
+      - TinyURL
+        - see http://naoya.dyndns.org/~naoya/mt/archives/001682.html
+    - Module::CoreList をやっぱりつかうのやめようかなー

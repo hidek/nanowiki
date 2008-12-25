@@ -1,0 +1,28 @@
+.nanoa_form_table {
+  border: 0;
+  margin: 1em 0;
+}
+
+.nanoa_form_table th {
+  background: #fff;
+  font-weight: normal;
+  text-align:  right;
+  vertical-align: top;
+}
+
+.nanoa_form_field_text {
+  border: 1px solid gray;
+  width: 400px;
+  height: 1.5em;
+}
+
+.nanoa_form_field_textarea {
+  border: 1px solid gray;
+  width: 400px;
+  height: 5em;
+}
+
+.nanoa_form_table .nanoa_form_error {
+  margin: 0 !important;
+  color:  #c00 !important;
+}

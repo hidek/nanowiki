@@ -1,0 +1,43 @@
+html {
+    background:#dddddd none repeat scroll 0 0; 
+    color:#000000;
+}
+body {
+    font-family: "メイリオ","Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3","ＭＳ Ｐゴシック","Osaka",sans-selif;
+}
+a { color:#006088; text-decoration:none;}
+a:hover { color:#3D81B8; text-decoration:underline; }
+
+div#container {
+    background:#ffffff none repeat scroll 0 0; 
+    margin:20px;
+    padding:20px;
+}
+
+h1#header {
+    background-color:#006699;
+    color:#ffffff;
+    font-size:36px;
+    font-family:"Tahoma";
+    font-weight:bold;
+    margin: 0;
+    padding:10px;
+}
+h1#header a{color:#ffffff;text-decoration:none;}
+
+div#login {text-align:right;margin:10px;}
+div#navi {text-align: right;margin:10px;}
+div#navi ul {margin:0;padding:0;}
+div#navi ul li {display: inline;margin-left:5px;padding:0;}
+
+div#content,div#diff {border:dotted 1px black;padding:10px;margin:10px;}
+div#content pre {padding:5px;background-color:#eeeeee; }
+
+h3#name {margin-left:10px;font-size:120%;text-decoration:underline;}
+input,textarea{font-size:120%;border:solid 1px #006088}
+textarea#input_content{width:600px;height:400px;margin:10px;}
+div#diff {line-height:24px;}
+
+table#versions {}
+ins{text-decoration:none;background-color:#DDFFDD;border:solid 1px #00AA00;}
+del{text-decoration:none;background-color:#FFDDDD;border:solid 1px #CC0000;}

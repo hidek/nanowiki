@@ -1,0 +1,90 @@
+Revision history for Perl extension MENTA
+
+0.13
+
+    - MENTA::Template を Text::MicroTemplate にさしかえた
+    - Data::Page::Navigation を追加(by hidek++)
+    - String::Diff を追加(by hidek++)
+    - HTTP::Session を 0.26 にあげた(by kazuho++)
+
+0.12
+
+    - template cache が効いてない不具合を修正(by mattn++)
+
+0.11
+
+    - mod_perl を正式にサポートすることにした。
+    - NoPaste をアプリケーションとして追加
+
+0.10
+
+    - HTTP::Engine::MinimalCGI をベースに書き直した。この変更により、FCGI や ModPerl への移行が容易になった。
+    - HTML::AutoForm を最新版に更新
+    - テンプレート更新しめんた。`docroot()` が空だと望ましくないことになっていたのでスラッシュッシュ(by drry++)
+    - plugin が Controller をもてるようになった
+    - openid がつかいやすくなった
+    - ログアウト処理(session expire)をプラグインがうけもつようにした
+    - OpenID でニックネームをとるようにした。sreg などのサポートによるもの。
+    - Filter::SQL を削除
+    - package main; している部分を削除。一般的なプログラミングスタイルに近くなった。
+    - *.pl style でコントローラを書いた場合でもきちんと動作するようにした
+
+0.09
+
+    - demo
+    -- OpenID のデモを導入
+    - extlib
+    -- Net::OpenID::Consumer::Lite を導入
+    -- Carp::Always をはずす
+
+0.08
+
+    - core
+    -- Class::Trigger のロード時間をけちるために、自分でかきなおした
+    -- HTTP::Headers::Fast をつかう
+    -- performance の改善をいくつか
+    -- モバイル対応のコードをオフにできるようにした
+    -- Class::Accessor::Lite をつかうことにした
+    -- load_plugin よばなくても自動でロードされるようになった
+    -- obsolete なメソッドを廃止: static_dir
+    - security
+    -- ディレクトリトラバーサル脆弱性をなおした
+    - extlib/
+    -- Class::Accessor::Lite を追加
+    -- HTTP::Headers::Fast 0.04 にさしかえ
+    -- Cache::Cache をいれた。いくつかパッチあてた
+
+0.07
+
+    - セッション管理機構を追加
+    - プラグイン機構を追加
+    - context オブジェクトを追加
+    - <?=r => のように raw であることを明示的に指定しなくても、render_partial() のカエリチは escape されなくなった
+    - `&unescape_html` の正規表現を修正(by drry++)
+    - コントローラディレクトリとテンプレートファイルのディレクトリをマージ
+    - ふかいディレクトリを表示できるようになった
+    - モバイル対応をひととおり完成させた
+
+0.05
+
+    - use CGI::ExceptionManager
+    - Digest::SHA::PurePerl を追加。
+    -- HMAC/SHA-1 の生成用
+
+0.04
+
+    - CGI::Simple 使うようになった
+    -- max_post_body 等を廃止
+    - コアからモバイル関連を除去
+    - HTTP::MobileAttribute から H::MobileAgent にさしかえ
+    -- Class::Component が邪魔なので
+    - Digest::SHA::PurePerl を追加(suggested by kazuhooku++)
+    - added more docs
+    - Filter::SQL を追加
+
+0.03
+
+    - ひととおりできあがってきたので、ここらでリリース。
+
+0.01    Tue Nov 11 17:21:16 2008
+    - original version

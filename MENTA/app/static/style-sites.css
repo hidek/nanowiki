@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+body {
+    font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN",
+                 "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",
+                 "メイリオ", "Meiryo", "Osaka", "ＭＳ Ｐゴシック",
+                 "Verdana", sans-serif;
+}
+
+h1 {
+    padding: 0.5em; margin-top: 0; margin-bottom: 0;
+}
+
+table {
+    border-style: solid;
+    border-width: 1px 0;
+}
+
+th {
+    border-style: solid;
+    border-width: 0 0 1px;
+}
+
+td {
+    padding: .5em;
+    border-style: solid;
+    border-width: 0 1px;
+}
+
+pre {
+    padding-left: 2px;
+    border-width: 1px 1px 3px 3px;
+    border-style: solid;
+    border-color: #777777;
+    background: #555555;
+    color: white;
+}
+
+.container {
+    width: 640px;
+    margin: auto;
+    padding: 0;
+}
+
+.bodyContainer {
+    background-color: white;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.subtitle {
+    background: transparent url(allow-right-orange.png) no-repeat scroll 0%;
+    padding-left: 26px;
+    line-height: 26px;
+    text-decoration: underline;
+}
+
+.maintitle {
+    background: transparent url(allow-right-green.png) no-repeat scroll 0%;
+    padding-left: 26px;
+    line-height: 26px;
+    text-decoration: underline;
+}
+
+.blocked-content {
+    padding: 1em;
+    border: 1px dotted gray;
+}
+
+.markdown h2 {
+    background: transparent url(allow-right-orange.png) no-repeat scroll 0%;
+    padding-left: 26px;
+    line-height: 26px;
+    text-decoration: underline;
+}
+
+.markdown p {
+    margin-left: 1em;
+}
+
+.markdown pre {
+    margin-left: 1em;
+    border-bottom: 1px solid #777777;
+    border-left: 3px solid #777777;
+    border-right: 1px solid #777777;
+    border-top: 1px solid #777777;
+    font-family: monospace;
+    background: #555555;
+    color: white;
+    padding-left: 2px;
+    width: 100%;
+}
+
+img {
+    border: 0 none;
+}

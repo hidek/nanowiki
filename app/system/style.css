@@ -1,0 +1,148 @@
+body { 
+    background: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-family: sans-serif;
+    font-size: 90%;
+    line-height: 1.5em;
+}
+
+#body {
+    background: #fff;
+    border-width: 0 1px;
+    border-color: #ccc;
+    border-style: solid;
+    margin: 0;
+    padding: 0;
+    width: 800px;
+    text-align: justify;
+}
+
+#top { 
+    font-family: Georgia, Tahoma;
+    background: url(top.jpg);
+    border-bottom: 1px solid #ccc;
+    width: 800px;
+    height: 96px;
+    margin: 0 0;
+    padding: 0;
+}
+
+#top h1 {
+    font-size: 50px;
+    margin: 0;
+    padding: 15px 0 0 50px;
+    line-height: 1em;
+}
+
+#top h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#top ul {
+    float: right;
+    margin: 20px 0 0 0;
+    padding: 0 50px 0 0;
+}
+
+#top ul li { 
+    display: inline;
+    font-weight: bold;
+    margin: 0;
+    padding: 0 0 0 1em;
+}
+
+#top ul li a {
+    color: #600;
+}
+
+#breadcrumb {
+    margin: 0;
+    padding: 1em 50px 0 50px;
+    font-weight: bold;    
+}
+
+#main {
+    margin: 0;
+    padding: 0 50px 1em 50px;
+}
+
+#main h2 {
+    border-width: 0 0 1px 0.7em;
+    border-style: solid;
+    border-color: #999;
+    margin: 1.5em 0 1em 0;
+    padding: 0 0.5em;
+}
+
+#main div {
+    margin: 1em 0;
+}
+
+#main p {
+    margin: 1em 0;
+}
+
+#main .column {
+    border: 1px solid gray;
+    margin: 1em 0;
+    padding: 0 0.5em;
+}
+
+#main .column h3 {
+    font-size: 100%;
+    margin: 0.5em 0;
+}
+
+#main .column p {
+    margin: 0.5em 0;
+}
+
+#main .pre_caption {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+#main pre {
+    border: 1px solid gray;
+    margin: 0 0 1em 0;
+    padding: 0.5em;
+    background: #eee;
+}
+
+#main .table table {
+    border: 1px solid gray;
+    border-collapse: collapse;
+    margin: 0.5em auto;
+}
+
+#main caption {
+    font-weight: bold;
+}
+
+#main .table th {
+    background: #ccc;
+    border: 1px solid gray;
+    border-collapse: collapse;
+    padding: 0.2em 0.3em;
+    text-align: center;
+}
+
+#main .table td {
+    border: 1px solid gray;
+    border-collapse: collapse;
+    padding: 0.2em 0.3em;
+}
+
+#footer {
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: #ccc;
+    margin: 1em 0 0 0;
+    padding: 0.5em 50px 2em 50px;
+    text-align: center;
+}
