@@ -2,12 +2,10 @@ html {
     background:#dddddd none repeat scroll 0 0; 
     color:#000000;
 }
-body {
-    font-family: "メイリオ","Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3","ＭＳ Ｐゴシック","Osaka",sans-selif;
-}
+body { font-family: "メイリオ","Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3","ＭＳ Ｐゴシック","Osaka",sans-selif; }
 a { color:#006088; text-decoration:none;}
 a:hover { color:#3D81B8; text-decoration:underline; }
-
+hr {margin-top:20px;margin-bottom:20px;border:dotted 1px black;}
 div#container {
     background:#ffffff none repeat scroll 0 0; 
     margin:20px;
@@ -41,5 +39,5 @@ div#diff {line-height:24px;}
 table#versions {}
 ins{text-decoration:none;background-color:#DDFFDD;border:solid 1px #00AA00;}
 del{text-decoration:none;background-color:#FFDDDD;border:solid 1px #CC0000;}
-div#page-stats {text-align: right;}
-div#page-navi {text-align: center;}
+div#page-stats {text-align: right;margin-top:20px;margin-bottom:20px;}
+div#page-navi {text-align: center;margin-top:20px;margin-bottom:20px;}
