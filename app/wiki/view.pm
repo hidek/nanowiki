@@ -8,8 +8,6 @@ use base qw(NanoA);
 use plugin::openid;
 use plugin::wiki;
 
-use Text::Markdown;
-
 sub run {
     my $app   = shift;
     my $query = $app->query;
@@ -27,7 +25,7 @@ sub run {
         'wiki/template/view',
         {
             name    => $name,
-            content => Text::Markdown->new->markdown(escape_html($page->{content})),
+            content => $app->wiki_format($page->{content}),
             page    => $page,
         }
     );

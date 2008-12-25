@@ -41,9 +41,6 @@ sub run {
         $author  = $app->openid_user->{'sreg.nickname'};
     }
 
-    warn $preview;
-
-
     return $app->render(
         'wiki/template/edit',
         {   name    => $name,
