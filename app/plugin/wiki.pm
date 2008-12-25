@@ -8,8 +8,8 @@ use base qw(NanoA::Plugin);
 use plugin::openid;
 
 use HTML::StripScripts::Parser;
-use Text::WikiFormat;
-use Text::Markdown;
+#use Text::Markdown;
+use Text::Hatena;
 
 sub init_plugin {
     my ($klass, $controller) = @_;
@@ -18,12 +18,18 @@ sub init_plugin {
     *{$controller . '::wiki_format'} = sub {
         my ($app, $raw) = @_;
 
-        my $text = Text::Markdown->new(
-            markdown_in_html_blocks => 1,
-            use_metadata            => 0,
-            heading_ids             => 0,
-            img_ids                 => 0,
-        )->markdown($raw);
+        #my $text = Text::Markdown->new(
+        #    markdown_in_html_blocks => 1,
+        #    use_metadata            => 0,
+        #    heading_ids             => 0,
+        #    img_ids                 => 0,
+        #)->markdown($raw);
+        
+        my $text = Text::Hatena->parse($raw);
+        return $app->wiki_scrubb_html($text);
+    };
+    *{$controller . '::wiki_scrubb_html'} = sub {
+        my ($app, $text) = @_;
 
         my $hss = HTML::StripScripts::Parser->new(
             {
