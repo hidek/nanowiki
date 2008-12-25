@@ -29,9 +29,9 @@ Results <?= $c->{pager}->first ?> - <?= $c->{pager}->first ?> of <?= $c->{pager}
 
 ? for my $page ($c->{pager}->pages_in_navigation) {
 ? if ($page == $c->{pager}->current_page) {
-<?= $page ?>&nbsp
+<?= $page ?>&nbsp;
 ? } else  {
-<a href="<?= $app->uri_for('wiki/', {page => $page}) ?>"><?= $page ?>&nbsp</a>
+<a href="<?= $app->uri_for('wiki/', {page => $page}) ?>"><?= $page ?>&nbsp;</a>
 ? }
 ? }
 

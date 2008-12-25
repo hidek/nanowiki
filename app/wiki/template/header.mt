@@ -4,18 +4,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="<?= $app->root_uri . '/app/wiki/styles/reset-fonts.css' ?>" type="text/css" />
 <link rel="stylesheet" href="<?= $app->root_uri . '/app/wiki/styles/base-min.css' ?>" type="text/css" />
-<link rel="stylesheet" href="<?= $app->root_uri . '/app/wiki/styles/style.css' ?>" type="text/css" />
 <link rel="stylesheet" href="<?= $app->root_uri . '/app/wiki/styles/prettify.css' ?>" type="text/css" />
-<script type="text/javascript" src="<?= $app->root_uri . '/app/wiki/scripts/prettify.js' ?>"></script>
+<link rel="stylesheet" href="<?= $app->root_uri . '/app/wiki/styles/style.css' ?>" type="text/css" />
 <script type="text/javascript" src="<?= $app->root_uri . '/app/wiki/scripts/jquery-1.2.6.min.js' ?>"></script>
-<script type="text/javascript">
-// <![CDATA[
-$(document).ready(function(){
-    $('pre').addClass('prettyprint');
-    prettyPrint();
-});
-// ]]>
-</script>
+<script type="text/javascript" src="<?= $app->root_uri . '/app/wiki/scripts/prettify.js' ?>"></script>
+<script type="text/javascript" src="<?= $app->root_uri . '/app/wiki/scripts/script.js' ?>"></script>
 <title>NanoA<?= $c->{title_suffix} ? " :: $c->{title_suffix}" : "" ?></title>
 </head>
 <body>
