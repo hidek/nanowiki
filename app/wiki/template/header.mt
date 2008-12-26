@@ -13,13 +13,7 @@
 </head>
 <body>
 <div id="container">
-
-<h1 id="header">
-<a href="<?= $app->uri_for('wiki/') ?>">
-NanoWiki
-</a>
-</h1>
-
+<div id="header"><a href="<?= $app->uri_for('wiki/') ?>">NanoWiki</a></div>
 <div id="login">
 ? if ($app->openid_user) {
 <a href="<?= $app->openid_logout_uri ?>">[Sign out]</a>

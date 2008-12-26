@@ -8,11 +8,11 @@ a:hover { color:#3D81B8; text-decoration:underline; }
 hr {margin-top:20px;margin-bottom:20px;border:dotted 1px black;}
 div#container {
     background:#ffffff none repeat scroll 0 0; 
-    margin:20px;
-    padding:20px;
+    margin:10px;
+    padding:5px;
 }
 
-h1#header {
+div#header {
     background-color:#006699;
     color:#ffffff;
     font-size:36px;
@@ -21,7 +21,15 @@ h1#header {
     margin: 0;
     padding:10px;
 }
-h1#header a{color:#ffffff;text-decoration:none;}
+div#header a{color:#ffffff;text-decoration:none;}
+div#footer {
+    background-color:#006699;
+    color:#ffffff;
+    font-size:12px;
+    font-family:"Tahoma";
+    padding: 5px;
+    text-align:center;
+}
 
 div#login {text-align:right;margin:10px;}
 div#navi {text-align: right;margin:10px;}

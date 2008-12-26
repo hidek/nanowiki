@@ -11,6 +11,8 @@ use HTML::StripScripts::Parser;
 #use Text::Markdown;
 use Text::Hatena;
 
+our $VERSION = '0.01';
+
 sub init_plugin {
     my ($klass, $controller) = @_;
     no strict 'refs';
