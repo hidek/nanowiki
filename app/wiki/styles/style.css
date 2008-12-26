@@ -44,8 +44,14 @@ input,textarea{font-size:120%;border:solid 1px #006088}
 textarea#input_content{width:600px;height:400px;margin:10px;}
 div#diff {line-height:24px;}
 
-table#versions {}
+table#pages,table#versions{margin-left:10px;margin-right:10px;}
+td.td-compare {width:30px;text-align:center;}
+td.td-version {width:50px;text-align:center;}
+td.td-name {width:400px;text-align:left;}
+td.td-author {width:200px;text-align:left;}
+td.td-date {width:200px;text-align:left}
 ins{text-decoration:none;background-color:#DDFFDD;border:solid 1px #00AA00;}
 del{text-decoration:none;background-color:#FFDDDD;border:solid 1px #CC0000;}
+
 div#page-stats {text-align: right;margin-top:20px;margin-bottom:20px;}
 div#page-navi {text-align: center;margin-top:20px;margin-bottom:20px;}

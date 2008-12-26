@@ -4,17 +4,17 @@
 Results <?= $c->{pager}->first ?> - <?= $c->{pager}->first ?> of <?= $c->{pager}->total_entries ?>
 </div>
 
-<table>
+<table id="pages">
 <tr>
 <th>name</th>
 <th>author</th>
-<th>created on</th>
+<th>date</th>
 </tr>
 ? for my $page (@{$c->{pages}}) {
 <tr>
-<td><a href="<?= $app->uri_for('wiki/view', {name => $page->{name}}) ?>"><?= $page->{name} ?></a></td>
-<td><?= $page->{author} ?></td>
-<td><?= $page->{created_on} ?></td>
+<td class="td-name"><a href="<?= $app->uri_for('wiki/view', {name => $page->{name}}) ?>"><?= $page->{name} ?></a></td>
+<td class="td-author"><?= $page->{author} ?></td>
+<td class="td-date"><?= $page->{created_on} ?></td>
 </tr>
 ? }
 </table>
