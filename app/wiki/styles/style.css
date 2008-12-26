@@ -36,6 +36,8 @@ div#navi {text-align: right;margin:10px;}
 div#navi ul {margin:0;padding:0;}
 div#navi ul li {display: inline;margin-left:5px;padding:0;}
 
+div.info {padding:10px;}
+
 div#content,div#diff {border:dotted 1px black;padding:10px;margin:10px;}
 div#content pre {padding:5px;background-color:#eeeeee; }
 
@@ -55,3 +57,5 @@ del{text-decoration:none;background-color:#FFDDDD;border:solid 1px #CC0000;}
 
 div#page-stats {text-align: right;margin-top:20px;margin-bottom:20px;}
 div#page-navi {text-align: center;margin-top:20px;margin-bottom:20px;}
+
+form#form-create {margin:10px;}

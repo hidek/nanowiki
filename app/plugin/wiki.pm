@@ -7,11 +7,56 @@ use utf8;
 use base qw(NanoA::Plugin);
 use plugin::openid;
 
-use HTML::StripScripts::Parser;
-#use Text::Markdown;
-use Text::Hatena;
-
 our $VERSION = '0.01';
+
+{
+
+    package Text::Hatena::Escaped;
+    use base qw(Text::Hatena);
+
+    sub text_line {
+        my $class = shift;
+        my $text  = shift->{items}->[2];
+        return $class->escape("$text\n");
+    }
+
+    sub cdata {
+        my $class = shift;
+        my $items = shift->{items};
+        my $data  = $items->[1];
+        $data = $class->escape($data);
+        return "<$data>\n";
+    }
+
+    sub pre_line {
+        my $class   = shift;
+        my $items   = shift->{items};
+        my $inlines = $class->expand($items->[2]);
+        return $class->escape("$inlines\n");
+    }
+
+    sub inline {
+        my $class = shift;
+        my $items = shift->{items};
+        my $item  = $items->[0] or return;
+        $item = $class->escape($item);
+        $item = Text::Hatena::AutoLink->parse($item);
+        return $item;
+    }
+
+    sub escape {
+        my ($self, $text) = @_;
+        return $text unless $text;
+        for ($text) {
+            s/&/&amp;/g;
+            s/</&lt;/g;
+            s/>/&gt;/g;
+            s/"/&quot;/g;
+        }
+        $text;
+    }
+
+}
 
 sub init_plugin {
     my ($klass, $controller) = @_;
@@ -20,34 +65,8 @@ sub init_plugin {
     *{$controller . '::wiki_format'} = sub {
         my ($app, $raw) = @_;
 
-        #my $text = Text::Markdown->new(
-        #    markdown_in_html_blocks => 1,
-        #    use_metadata            => 0,
-        #    heading_ids             => 0,
-        #    img_ids                 => 0,
-        #)->markdown($raw);
-        
-        my $text = Text::Hatena->parse($raw);
-        return $app->wiki_scrubb_html($text);
-    };
-    *{$controller . '::wiki_scrubb_html'} = sub {
-        my ($app, $text) = @_;
-
-        my $hss = HTML::StripScripts::Parser->new(
-            {
-                Context        => 'Flow',
-                #BanList        => [qw( br img )] | {br => '1', img => '1'},
-                #BanAllBut      => [qw(p div span)],
-                AllowSrc       => 1,
-                AllowHref      => 1,
-                AllowRelURL    => 1,
-                AllowMailto    => 1,
-                EscapeFiltered => 1,
-                #Rules => {},
-            }
-        );
-
-        return $hss->filter_html($text);
+        my $text = Text::Hatena::Escaped->parse($raw);
+        return $text;
     };
     *{$controller . '::wiki_find_page'} = sub {
         my ($app, $name, $version) = @_;
