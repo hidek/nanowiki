@@ -6,8 +6,8 @@ use utf8;
 
 use base qw(NanoA);
 
-use plugin::wiki;
 use plugin::openid;
+use wiki::plugin::wiki;
 
 use Data::Page::Navigation;
 

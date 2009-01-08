@@ -1,4 +1,4 @@
-package plugin::wiki;
+package wiki::plugin::wiki;
 
 use strict;
 use warnings;

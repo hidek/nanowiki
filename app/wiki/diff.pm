@@ -5,8 +5,9 @@ use warnings;
 use utf8;
 
 use base qw(NanoA);
+
 use plugin::openid;
-use plugin::wiki;
+use wiki::plugin::wiki;
 
 use String::Diff;
 
